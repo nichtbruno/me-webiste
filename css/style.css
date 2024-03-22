@@ -5,12 +5,12 @@
 }
 
 body {
-    background: #191919;
+    background: #090909;
 }
 
 .navbar {
-    background-image: linear-gradient(to bottom, #121212 30%, #12121200 100%);
-    height: 120px;
+    background-image: linear-gradient(to bottom, #080808 30%, #12121200 100%);
+    height: 200px;
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
@@ -20,18 +20,43 @@ body {
 }
 
 .navbar_container {
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
-.content {
+.cont {
     margin: 0 20% 0 20%;
 }
 
-#navbar_logo {
+#lorem {
+    color: white;
+}
+
+#navbar_home {
+    font-family: Nabla;
+    -webkit-text-fill-color: white;
+    text-decoration: none;
+    margin: 0 30px 0 30px;
+}
+
+#navbar_about, #navbar_projects {
+    font-family: Pixelify_Sans;
     -webkit-text-fill-color: white;
     text-decoration: none;
 }
 
-#lorem {
-    color: #ffffff;
+.introduction {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    margin: 0 0 50px 0;
+}
+
+.me {
+    vertical_align: middle;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
 }
