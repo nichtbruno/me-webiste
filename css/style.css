@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #191919;
+}
+
+.navbar {
+    background-image: linear-gradient(to bottom, #121212 30%, #12121200 100%);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    padding: 10px 0 0 0;
+}
+
+.content {
+    margin: 0 20% 0 20%;
+}
+
+#navbar_logo {
+    -webkit-text-fill-color: white;
+    text-decoration: none;
+}
+
+#lorem {
+    color: #ffffff;
+}
