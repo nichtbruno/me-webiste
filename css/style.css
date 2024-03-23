@@ -45,10 +45,6 @@ a.active {
     font-weight: bold;
 }
 
-/* a:is(:link, :active, :visited).active { */
-/*     -webkit-text-fill-color: yellow; */
-/* } */
-
 .introduction {
     display: flex;
     justify-content: center;
