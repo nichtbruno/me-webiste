@@ -1,5 +1,5 @@
 const navLinkList = document.querySelectorAll(".nav_link");
-const wPathname = window.location.pathname + ".html";
+const wPathname = window.location.pathname;
 
 navLinkList.forEach(navLinkEl => {
     const navLinkPathname = new URL(navLinkEl.href).pathname;
