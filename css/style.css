@@ -186,7 +186,7 @@ hr {
     border-bottom-color: #3edf4b;
     border-radius: 5px;
     font-size: 1.2rem;
-    box-shadow: 0 0 20px var(--shadow-color);
+    /* box-shadow: 0 0 20px var(--shadow-color); */
 }
 
 .constr {
