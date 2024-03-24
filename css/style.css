@@ -124,6 +124,22 @@ a.active {
     }
 }
 
+a, a:hover, a:active, a:visited {
+    text-decorations: none;
+    color: var(--secondary-color);
+}
+a.tlink, a:hover, a:active {
+    color: var(--tritary-color);
+}
+
+hr {
+    margin: 40px 10% 20px 10%;
+    border-color: var(--disabled-color);
+}
+.footer {
+    margin: 0 10% 20px 10%;
+}
+
 .i_text {
 }
 
@@ -152,15 +168,26 @@ a.active {
     user-select: none;
 }
 
+.construction {
+    margin: 80px 0 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.constr {
+    margin: auto;
+    width: 300px;
+}
+
 .quicky {
-    margin: 80px 0 50px 0;
+    margin: 0 0 50px 0;
     display: flex;
     align-items: center;
 }
 
 .kofi {
     margin: auto;
-    width: 250px;
+    width: 300px;
 }
 
 .cont {
