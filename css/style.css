@@ -133,13 +133,21 @@ a, a:hover, a:active, a:visited {
 a.tlink, a:hover, a:active {
     color: var(--tritary-color);
 }
+/* a.tlink { */
+/*     color: var(--tritary-color); */
+/* } */
 
 hr {
     margin: 40px 10% 20px 10%;
     border-color: var(--disabled-color);
 }
+hr.sp {
+    margin: 200px 10% 20px 10%;
+}
 .footer {
     margin: 0 10% 20px 10%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .i_text {
@@ -185,7 +193,7 @@ hr {
     border-right-color: #fff020;
     border-bottom-color: #3edf4b;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1.13rem;
     /* box-shadow: 0 0 20px var(--shadow-color); */
 }
 

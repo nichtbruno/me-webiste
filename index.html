@@ -9,12 +9,13 @@
         <style>
             @font-face {
                 font-family: Pixel;
-                /* src: url('fonts/Pixelify_Sans/static/PixelifySans-Regular.ttf') */
                 src: url('fonts/IBM_VGA8.ttf')
             }
         </style>
+        <script defer src="js/cookies.js"></script>
         <script defer src="js/active-page.js"></script>
         <script defer src="js/main.js"></script>
+        <script defer src="js/version.js"></script>
     </head>
     <body>
         <div class="navbar-spacer">
@@ -29,13 +30,13 @@
             <div class="navbar_container">
                 <ul class="nav_list">
                     <li class="nav_item">
-                        <a class="nav_link" href="pages/about-me.html">about-me</a>
+                        <a class="nav_link" href="/weblogs.html">weblogs!</a>
                     </li>
                     <li class="nav_item">
-                        <a class="nav_link active" href="/index.html">ME</a>
+                        <a class="nav_link active" href="/">ME</a>
                     </li>
                     <li class="nav_item">
-                        <a class="nav_link" href="pages/projects.html">projects</a>
+                        <a class="nav_link" href="/projects.html">projects</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +60,6 @@
                         <i class="fa-brands fa-itch-io"></i>
                     </a>
                 </div>
-                <!-- <p class="message">&ltbtw. you can change the font up top&gt</p> -->
                 <p class="message">
                     <span class="accent">&lt</span>
                     btw. you can change the font up top
@@ -144,6 +144,7 @@ Nunc aliquet vulputate rutrum. In egestas ac justo sit amet convallis. Ut accums
                 | donate at my 
                 <a href="/" class="tlink">ko-fi</a>
             </span>
+            <span id="version"></span>
         </div>
     </body>
 </html>
