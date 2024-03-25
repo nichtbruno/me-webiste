@@ -6,20 +6,28 @@
     --disabled-color: #2f2f2f;
     --shadow-color: #444444;
 }
+/* .light_theme { */
+/*     --primary-color: #fdfdfd; */
+/*     --primary-bg: #fdfdfd; */
+/*     --secondary-color: #080808; */
+/*     --tritary-color: #fcb103; */
+/*     --disabled-color: #cccccc; */
+/*     --shadow-color: #aaaaaa; */
+/* } */
 .light_theme {
-    --primary-color: #fdfdfd;
-    --primary-bg: #fdfdfd;
-    --secondary-color: #080808;
-    --tritary-color: #fcb103;
-    --disabled-color: #cccccc;
-    --shadow-color: #aaaaaa;
+    --primary-color: #241623;
+    --primary-bg: #241623;
+    --secondary-color: #E9D2C0;
+    --tritary-color: #417B5A;
+    --disabled-color: #D0CEBA;
+    --shadow-color: #2E5EAA;
 }
 
 :root {
-    font-family: Pixel;
+    font-family: Calibri;
 }
 .alt_font {
-    font-family: Monospace;
+    font-family: Pixel;
 }
 .accent {
     color: var(--tritary-color);
@@ -47,24 +55,25 @@ body {
 
 button.spec {
     background: transparent;
-    border-radius: 50%;
-    border-color: var(--secondary-color);
-    border: 2px solid;
-    margin: 0 5px 0 5px;
+    /* border-radius: 50%; */
+    border-color: transparent;
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: left;
 }
 #font_button {
     padding: 8px 10px;
 }
 #theme {
-    padding: 8px 9px;
+    padding: 0px;
 }
 button.spec:hover {
-    background: var(--secondary-color);
+    color: var(--tritary-color);
     cursor: pointer;
 }
-button.spec:hover .fa-solid {
-    color: var(--primary-color);
-}
+/* button.spec:hover .fa-solid { */
+/*     color: var(--primary-color); */
+/* } */
 
 .navbar {
     background-image: linear-gradient(to bottom, var(--primary-color) 40%, #00000000 100%);
@@ -106,6 +115,10 @@ a.active {
     position: sticky;
     flex-wrap: wrap;
     margin: 0px 10% 80px 10%;
+}
+
+.fa-brands {
+    color: var(--shadow-color);
 }
 
 .i_col {
@@ -189,7 +202,7 @@ hr.sp {
 }
 
 .about-section {
-    margin: 40px 10%;
+    margin: 40px 20%;
     display: flex;
     /* justify-content: space-between; */
     /* align-items: center; */
@@ -222,7 +235,8 @@ hr.sp {
     font-weight: bold;
 }
 
-#lorem {
+.apple {
+    width: 100px;
 }
 
 @media screen and (max-width: 675px) {
@@ -238,5 +252,6 @@ hr.sp {
     .about-section {
         flex-direction: column;
         font-size: 1rem;
+        margin: 0 10%;
     }
 }
