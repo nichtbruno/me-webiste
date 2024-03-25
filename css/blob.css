@@ -1,31 +1,43 @@
+.blobfuck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
 .blob { 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* background: radial-gradient(circle at -16% -16%, hotpink, slateblue); */
-    display: grid;
-    height: 100vh;
+    height: 200px;
     place-items: center; 
+
+    --color-one: #fcb103;
+    --color-two: red;
+    --color-five: yellow;
 }
 
 .blob::before {
     animation: anim 30s infinite;
-    background: radial-gradient(circle at 0% 0%, hotpink, slateblue);
+    background: radial-gradient(circle at 0% 0%, var(--color-one), var(--color-five));
+    /* background: radial-gradient(circle at 0% 0%, hotpink, slateblue); */
     border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-    box-shadow: 0 -2vmin 4vmin LightPink inset, 0 1vmin 4vmin MediumPurple inset,
-        0 -2vmin 7vmin purple inset;
+    box-shadow: 0 -2vmin 4vmin yellow inset, 0 1vmin 4vmin MediumBlue inset,
+        0 -2vmin 7vmin blue inset;
+    /* box-shadow: 0 -2vmin 4vmin LightPink inset, 0 1vmin 4vmin MediumPurple inset, */
+    /*     0 -2vmin 7vmin purple inset; */
     content: "";
-    height: 50vmin;
+    height: 20vmin;
     position: absolute;
-    width: 50vmin;
+    width: 20vmin;
 }
 
 @keyframes anim {
     0%,
     100% {
         border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
-        box-shadow: 0 -2vmin 4vmin LightPink inset, 0 -4vmin 4vmin MediumPurple inset,
-            0 -2vmin 7vmin purple inset;
+        box-shadow: 0 -2vmin 4vmin var(--color-five) inset, 0 -4vmin 4vmin var(--color-two) inset,
+            0 -2vmin 7vmin var(--color-two) inset;
     }
 
     10% {
@@ -38,8 +50,8 @@
 
     30% {
         border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
-        box-shadow: 0 -4vmin 8vmin hotpink inset, -1vmin -2vmin 6vmin LightPink inset,
-            -1vmin -2vmin 4vmin MediumPurple inset, 1vmin 4vmin 8vmin purple inset;
+        box-shadow: 0 -4vmin 8vmin var(--color-five) inset, -1vmin -2vmin 6vmin var(--color-five) inset,
+            -1vmin -2vmin 4vmin var(--color-two) inset, 1vmin 4vmin 8vmin var(--color-two) inset;
     }
 
     40% {
@@ -48,8 +60,8 @@
 
     50% {
         border-radius: 100%;
-        box-shadow: 0 4vmin 16vmin hotpink inset, 0 2vmin 5vmin LightPink inset, 0 4vmin 4vmin MediumPurple inset,
-            0 6vmin 8vmin purple inset;
+        box-shadow: 0 4vmin 16vmin var(--color-five) inset, 0 2vmin 5vmin var(--color-five) inset, 0 4vmin 4vmin var(--color-five) inset,
+            0 6vmin 8vmin var(--color-two) inset;
     }
 
     60% {
@@ -58,8 +70,8 @@
 
     70% {
         border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
-        box-shadow: 1vmin 1vmin 8vmin LightPink inset,
-            2vmin -1vmin 4vmin MediumPurple inset, -1vmin -1vmin 16vmin purple inset;
+        box-shadow: 1vmin 1vmin 8vmin var(--color-five) inset,
+            2vmin -1vmin 4vmin var(--color-two) inset, -1vmin -1vmin 16vmin var(--color-two) inset;
     }
 
     80% {
@@ -70,3 +82,8 @@
         border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
     }
 }
+
+/* .blob-brace { */
+/*     font-size: 25vh; */
+/*     margin: -10px 20px 0 20px; */
+/* } */
