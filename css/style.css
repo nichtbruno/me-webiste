@@ -115,16 +115,6 @@ a.active {
     flex-wrap: wrap;
     /* margin: -30px 0 0 0; */
 }
-@media screen and (max-width: 675px) {
-    .i_col {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 30px 0 0 0;
-    }
-}
 
 a, a:hover, a:active, a:visited {
     text-decorations: none;
@@ -178,16 +168,6 @@ hr.sp {
     user-select: none;
 }
 
-.cci {
-    margin: auto;
-    padding: 15px 20px;
-    /* border-radius: 5px; */
-    font-size: 1.13rem;
-    background: #000000;
-    color: #ffffff;
-    /* background: var(--primary-bg) */
-}
-
 .constr {
     margin: auto;
     width: 300px;
@@ -214,14 +194,42 @@ hr.sp {
 
 .pattern {
     height: 100px;
-    margin: 0 0 40px 0;
-    background-color: #fae60c;
+    margin: 0 0 80px 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     opacity: 0.8;
-    background: repeating-linear-gradient( -45deg, #000000, #000000 12px, #fae60c 0px, #fae60c 25px );
+    background: repeating-linear-gradient( -45deg, var(--primary-bg), var(--primary-bg) 12px, var(--tritary-color) 0px, var(--tritary-color) 25px );
+    z-index: -1;
     /* background: repeating-linear-gradient( -45deg, var(--primary-bg), var(--primary-bg) 12px, #fae60c 0px, #fae60c 25px ); */
 }
 
+.cci {
+    margin: 0 10px;
+    padding: 15px 20px;
+    font-size: 1.13rem;
+    background: var(--primary-bg);
+    font-weight: bold;
+}
+
 #lorem {
+}
+
+@media screen and (max-width: 675px) {
+    .i_col {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 30px 0 0 0;
+    }
+
+    .pattern {
+        flex-direction: column;
+        height: 140px;
+    }
+    .cci {
+        margin: 5px 10px;
+    }
 }
