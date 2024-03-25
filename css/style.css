@@ -224,12 +224,4 @@ hr.sp {
         align-items: center;
         margin: 30px 0 0 0;
     }
-
-    .pattern {
-        flex-direction: column;
-        height: 140px;
-    }
-    .cci {
-        margin: 5px 10px;
-    }
 }
