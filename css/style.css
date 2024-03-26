@@ -1,68 +1,14 @@
-/* :root { */
-/*     --primary-color: #090909; */
-/*     --primary-bg: #080808; */
-/*     --secondary-color: #fffffa; */
-/*     --tritary-color: #fcb103; */
-/*     --disabled-color: #2f2f2f; */
-/*     --shadow-color: #444444; */
-/* } */
-/* .light_theme { */
-/*     --primary-color: #fdfdfd; */
-/*     --primary-bg: #fdfdfd; */
-/*     --secondary-color: #080808; */
-/*     --tritary-color: #fcb103; */
-/*     --disabled-color: #cccccc; */
-/*     --shadow-color: #aaaaaa; */
-/* } */
 :root {
-    --primary-color: #241623;
-    --primary-bg: #241623;
-    --secondary-color: #E9D2C0;
-    --tritary-color: #417B5A;
-    --disabled-color: #D0CEBA;
-    --shadow-color: #2E5EAA;
-}
-/* .light_theme { */
-/*     --primary-color: #291F1E; */
-/*     --primary-bg: #291F1E; */
-/*     --secondary-color: #C4D6B0; */
-/*     --tritary-color: #477998; */
-/*     --disabled-color: #F64740; */
-/*     --shadow-color: #A3333D; */
-/* } */
-/* .light_theme { */
-/*     --primary-color: #2D3047; */
-/*     --primary-bg: #2D3047; */
-/*     --secondary-color: #ffffff; */
-/*     --tritary-color: #1B998B; */
-/*     --disabled-color: #ED217C; */
-/*     --shadow-color: #FF9B71; */
-/* } */
-/* .light_theme { */
-/*     --primary-color: #273043; */
-/*     --primary-bg: #273043; */
-/*     --secondary-color: #EFF6EE; */
-/*     --tritary-color: #F02D3A; */
-/*     --disabled-color: #D2D4C8; */
-/*     --shadow-color: #9197AE; */
-/* } */
-.light_theme {
-    --primary-color: #07072B;
-    --primary-bg: #07072B;
-    --secondary-color: #EAE9FC;
-    --tritary-color: #C2004D;
-    --disabled-color: #3197D8;
-    --shadow-color: #9197AE;
-}
-
-:root {
+    --primary-color: #07072b;
+    --secondary-color: #eae9fc;
+    --third-color: #9197ae;
+    --accent-color: #c2004d;
+    --highlight-color: #3197d8;
     font-family: Calibri;
 }
-.alt_font {
-    font-family: Pixel;
-}
+
 .accent {
-    color: var(--tritary-color);
+    color: var(--accent-color);
     display: inline;
 }
 
@@ -75,7 +21,7 @@
 }
 
 body {
-    background: var(--primary-bg);
+    background: var(--primary-color);
 }
 
 .navbar-spacer {
@@ -131,7 +77,7 @@ button.spec:hover {
 }
 
 a.active {
-    -webkit-text-fill-color: var(--tritary-color);
+    -webkit-text-fill-color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -145,7 +91,7 @@ a.active {
 }
 
 .fa-brands {
-    color: var(--shadow-color);
+    color: var(--third-color);
 }
 
 .i_col {
@@ -161,7 +107,7 @@ a, a:hover, a:active, a:visited {
     color: var(--secondary-color);
 }
 a.tlink, a:hover, a:active {
-    color: var(--tritary-color);
+    color: var(--accent-color);
 }
 /* a.tlink { */
 /*     color: var(--tritary-color); */
@@ -169,7 +115,7 @@ a.tlink, a:hover, a:active {
 
 hr {
     margin: 40px 10% 20px 10%;
-    border-color: var(--disabled-color);
+    border-color: var(--highlight-color);
 }
 hr.sp {
     margin: 200px 10% 20px 10%;
@@ -181,6 +127,7 @@ hr.sp {
 }
 
 .i_text {
+    font-size: 5hmin;
 }
 
 .profiles_div {
@@ -250,7 +197,7 @@ hr.sp {
     align-items: center;
     justify-content: center;
     opacity: 0.8;
-    background: repeating-linear-gradient( -45deg, var(--primary-bg), var(--primary-bg) 12px, var(--tritary-color) 0px, var(--tritary-color) 25px );
+    background: repeating-linear-gradient( -45deg, var(--primary-color), var(--primary-color) 12px, var(--accent-color) 0px, var(--accent-color) 25px );
     z-index: -1;
 }
 
@@ -258,7 +205,7 @@ hr.sp {
     margin: 0 10px;
     padding: 15px 20px;
     font-size: 1.13rem;
-    background: var(--primary-bg);
+    background: var(--primary-color);
     font-weight: bold;
 }
 
