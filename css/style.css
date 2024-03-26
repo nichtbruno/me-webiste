@@ -38,12 +38,20 @@
 /*     --disabled-color: #ED217C; */
 /*     --shadow-color: #FF9B71; */
 /* } */
+/* .light_theme { */
+/*     --primary-color: #273043; */
+/*     --primary-bg: #273043; */
+/*     --secondary-color: #EFF6EE; */
+/*     --tritary-color: #F02D3A; */
+/*     --disabled-color: #D2D4C8; */
+/*     --shadow-color: #9197AE; */
+/* } */
 .light_theme {
-    --primary-color: #273043;
-    --primary-bg: #273043;
-    --secondary-color: #EFF6EE;
-    --tritary-color: #F02D3A;
-    --disabled-color: #D2D4C8;
+    --primary-color: #07072B;
+    --primary-bg: #07072B;
+    --secondary-color: #EAE9FC;
+    --tritary-color: #C2004D;
+    --disabled-color: #3197D8;
     --shadow-color: #9197AE;
 }
 
