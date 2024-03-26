@@ -1,11 +1,11 @@
-:root {
-    --primary-color: #090909;
-    --primary-bg: #080808;
-    --secondary-color: #fffffa;
-    --tritary-color: #fcb103;
-    --disabled-color: #2f2f2f;
-    --shadow-color: #444444;
-}
+/* :root { */
+/*     --primary-color: #090909; */
+/*     --primary-bg: #080808; */
+/*     --secondary-color: #fffffa; */
+/*     --tritary-color: #fcb103; */
+/*     --disabled-color: #2f2f2f; */
+/*     --shadow-color: #444444; */
+/* } */
 /* .light_theme { */
 /*     --primary-color: #fdfdfd; */
 /*     --primary-bg: #fdfdfd; */
@@ -14,13 +14,37 @@
 /*     --disabled-color: #cccccc; */
 /*     --shadow-color: #aaaaaa; */
 /* } */
-.light_theme {
+:root {
     --primary-color: #241623;
     --primary-bg: #241623;
     --secondary-color: #E9D2C0;
     --tritary-color: #417B5A;
     --disabled-color: #D0CEBA;
     --shadow-color: #2E5EAA;
+}
+/* .light_theme { */
+/*     --primary-color: #291F1E; */
+/*     --primary-bg: #291F1E; */
+/*     --secondary-color: #C4D6B0; */
+/*     --tritary-color: #477998; */
+/*     --disabled-color: #F64740; */
+/*     --shadow-color: #A3333D; */
+/* } */
+/* .light_theme { */
+/*     --primary-color: #2D3047; */
+/*     --primary-bg: #2D3047; */
+/*     --secondary-color: #ffffff; */
+/*     --tritary-color: #1B998B; */
+/*     --disabled-color: #ED217C; */
+/*     --shadow-color: #FF9B71; */
+/* } */
+.light_theme {
+    --primary-color: #273043;
+    --primary-bg: #273043;
+    --secondary-color: #EFF6EE;
+    --tritary-color: #F02D3A;
+    --disabled-color: #D2D4C8;
+    --shadow-color: #9197AE;
 }
 
 :root {
@@ -61,12 +85,6 @@ button.spec {
     display: flex;
     justify-content: left;
 }
-#font_button {
-    padding: 8px 10px;
-}
-#theme {
-    padding: 0px;
-}
 button.spec:hover {
     color: var(--tritary-color);
     cursor: pointer;
@@ -81,6 +99,7 @@ button.spec:hover {
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
+    font-weight: bold;
     position: sticky;
     top: -1px;
     z-index: 999;
@@ -100,7 +119,7 @@ button.spec:hover {
 
 .nav_link {
     text-decoration: none;
-    margin: 0 15px 0 15px;
+    margin: 0 10px 0 10px;
 }
 
 a.active {
@@ -252,6 +271,6 @@ hr.sp {
     .about-section {
         flex-direction: column;
         font-size: 1rem;
-        margin: 0 10%;
+        margin: 0 10% 40px 10%;
     }
 }
