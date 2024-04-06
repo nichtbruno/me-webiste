@@ -3,58 +3,69 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Projects!</title>
+        <title>My Projects</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-        <style>
-            @font-face {
-                font-family: Pixel;
-                src: url('../fonts/IBM_VGA8.ttf')
-            }
-        </style>
+        <link
+            rel="preload"
+            href="/fonts/AnonymousPro-Regular.ttf"
+            as="font"
+        />
         <script defer src="js/cookies.js"></script>
-        <script defer src="js/active-page.js"></script>
         <script defer src="js/main.js"></script>
-        <script defer src="js/version.js"></script>
+        <script defer src="js/theme-toggle.js"></script>
     </head>
     <body>
-        <div class="navbar-spacer">
-            <button class="spec" id="font_button">
-                <i class="fa-solid fa-font"></i>
-            </button>
-            <button class="spec" id="theme">
-                <i class="fa-solid fa-circle-half-stroke"></i>
-            </button>
-        </div>
-        <nav class="navbar">
-            <div class="navbar_container">
-                <ul class="nav_list">
-                    <li class="nav_item">
-                        <a class="nav_link" href="/weblogs.html">weblogs!</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="/">ME</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="/projects.html">projects</a>
-                    </li>
-                </ul>
+        <div class="kbody">
+            <div class="left">
+                <nav class="proj">
+                    <span class="links">
+                        <a class="button filled" href="/">← Home</a>
+                    </span>
+                    <span class="links">
+                        <span class="links">
+                            <a class="button filled secondary" href="/">Weblogs →</a>
+                        </span>
+                        <span class="dotted-link">
+                            <a href="/">Contact Me</a>
+                        </span>
+                    </span>
+                </nav>
+                <div>
+                    <h2 class="main-title projs">Projects</h2>
+                </div>
+                <div>
+                    <h4 class="sub-title">Some cool projects I worked on :)</h4>
+                </div>
+                <div>
+                    <section class="project-section">
+                        <h2 class="project-title">KOEZ</h2>
+                        <img src="/images/KOEZ.png" alt="KOEZ" class="koez-img">
+                        <p class="project-desc">
+                            KOEZ is a tool to easily create Classes and Objects
+                            in a visualy interesting way. I created it in 2 days
+                            in order to try React out. It was created with <span class="dimmed-text">React</span>
+                            with <span class="dimmed-text">Typescript</span>.
+                        </p>
+                        <a class="button filled red" href="https://nichtbruno.github.io/koez/" target="_blank">Try KOEZ →</a>
+                        <a class="button filled secondary" href="https://github.com/nichtbruno/koez" target="_blank">GitHub Repo →</a>
+                    </section>
+                    <section class="project-section">
+                        <p class="project-desc dimmed-text">
+                            /* there are more projects I wokred/work on */
+                        </p>
+                    </section>
+                </div>
             </div>
-        </nav>
-        <div class="pattern">
-            <span class="cci">
-                Website under construction!
-            </span>
         </div>
-        <hr class="sp">
-        <div class="footer">
-            <span>
+        <footer>
+            <span class="sfooter">
                 © nichtbruno 2024, licensed under 
                 <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="tlink">CC BY-SA</a> 
-                | donate at my 
-                <a href="/" class="tlink">ko-fi</a>
+                <!-- | &nbsp;donate at my  -->
+                <!-- <a href="/" class="tlink">ko-fi</a> -->
             </span>
-            <span id="version"></span>
-        </div>
+            <i id="theme-toggle" class="fa-solid fa-moon"></i>
+        </footer>
     </body>
 </html>

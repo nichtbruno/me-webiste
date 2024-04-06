@@ -2,10 +2,11 @@
     --color-green: #4FEC58;
     --color-blue: #C7CCFB;
     --color-secondary: #4FEAEC;
+    --color-red: #EC4F4F;
     --color-bg: #FCFCFF;
     --color-fg-low-contrast: #2E2E2E;
     --color-fg-high-contrast: #000000;
-    --color-fg-dimed: #6D6D6D;
+    --color-fg-dimed: #564E6D;
     --color-border-hint: #C2C2C2;
     --color-selection: var(--color-fg-high-contrast);
 }
@@ -13,6 +14,7 @@
     --color-green: #A6F999;
     --color-blue: #C0C6FC;
     --color-secondary: #99F9E8;
+    --color-red: #F99999;
     --color-bg: #070B0B;
     --color-fg-low-contrast: #DFDFDF;
     --color-fg-high-contrast: #ffffff;
@@ -27,7 +29,7 @@
 
 @font-face {
     font-family: 'AnonymousPro-Regular';
-    font-display: optional;
+    /* font-display: optional; */
     src: url('/fonts/AnonymousPro-Regular.ttf');
 }
 
@@ -75,6 +77,18 @@ h2, h4, p, span {
     margin-top: 20px;
 }
 
+.project-section {
+    margin-top: 4rem;
+}
+
+.project-title {
+    margin-bottom: 0.5rem;
+}
+
+.project-desc {
+    margin-top: 0;
+}
+
 .apple:hover {
     font-weight: bold;
     background-image: linear-gradient(90deg in hsl longer hue, red, blue);
@@ -105,11 +119,44 @@ nav {
     margin-bottom: 20px;
 }
 
+nav.proj {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.projs {
+    margin-top: 2rem;
+}
+
 .links {
     display: flex;
     margin-left: 0;
     gap: 1rem;
     margin: 0;
+}
+
+.dimmed-text {
+    color: var(--color-fg-dimed);
+}
+
+.koez-img {
+    width: 50%;
+    border: 1px dashed var(--color-fg-dimed);
+    margin-bottom: 0.5rem;
+    filter: grayscale(100%);
+}
+.koez-img:hover {
+    width: 80%;
+    filter: none;
+}
+
+.dotted-link {
+    display: flex;
+    align-items: center;
 }
 
 .button {
@@ -130,6 +177,11 @@ nav {
 .secondary {
     background-color: var(--color-secondary);
     border: 1px dashed var(--color-secondary);
+}
+.red {
+    background-color: var(--color-red);
+    border: 1px dashed var(--color-red);
+    margin-right: 0.5rem;
 }
 
 footer {
