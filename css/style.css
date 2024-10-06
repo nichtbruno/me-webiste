@@ -151,13 +151,13 @@ nav.proj {
     color: var(--color-fg-dimed);
 }
 
-.koez-img {
-    width: 50%;
+.project_images {
+    width: 20%;
     border: 1px dashed var(--color-fg-dimed);
     margin-bottom: 0.5rem;
     filter: grayscale(100%);
 }
-.koez-img:hover {
+.project_images:hover {
     width: 80%;
     filter: none;
 }
