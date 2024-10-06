@@ -83,6 +83,7 @@ h2, h4, p, span {
 
 .project-title {
     margin-bottom: 0.5rem;
+    min-width: auto;
 }
 
 .project-desc {
@@ -94,10 +95,16 @@ h2, h4, p, span {
     background-image: linear-gradient(90deg in hsl longer hue, red, blue);
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     background-image: conic-gradienti(90deg in hsl longer hue, red, blue);
     cursor: url("/images/apple.png"), pointer;
+}
+
+.sRow > *:not(:last-child) {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
 }
 
 a {
