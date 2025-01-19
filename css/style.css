@@ -9,18 +9,20 @@
     --color-fg-dimed: #564E6D;
     --color-border-hint: #C2C2C2;
     --color-selection: var(--color-fg-high-contrast);
+    --color-cool: #ffff;
 }
 :root[data-theme="dark"] {
     --color-green: #A6F999;
     --color-blue: #C0C6FC;
     --color-secondary: #99F9E8;
     --color-red: #F99999;
-    --color-bg: #070B0B;
+    --color-bg: #030303;
     --color-fg-low-contrast: #DFDFDF;
     --color-fg-high-contrast: #ffffff;
     --color-fg-dimed: #B8B5BE;
     --color-border-hint: #1E2121;
     --color-selection: var(--color-bg);
+    --color-cool: #ffff;
 }
 
 * {
@@ -28,27 +30,35 @@
 }
 
 @font-face {
-    font-family: 'AnonymousPro-Regular';
-    /* font-display: optional; */
-    src: url('/fonts/AnonymousPro-Regular.ttf');
+    font-family: 'APR';
+    src: local('/fonts/')
+        url('/fonts/AnonymousPro-Regular.ttf') format('truetype'),
+        url('/fonts/AnonymousPro-Bold.ttf') format('truetype'),
+        url('/fonts/AnonymousPro-BoldItalic.ttf') format('truetype'),
+        url('/fonts/AnonymousPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HND';
+    src: local('Helvetica Now Display Ext Blk'), local('/fonts/Helvetica-Now-Display-Ext-Blk'),
+        url('/fonts/HelveticaNowDisplay-ExtBlk/HelveticaNowDisplay-ExtBlk.woff2') format('woff2'),
+        url('/fonts/HelveticaNowDisplay-ExtBlk/HelveticaNowDisplay-ExtBlk.woff') format('woff'),
+        url('/fonts/HelveticaNowDisplay-ExtBlk/HelveticaNowDisplay-ExtBlk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
     background-color: var(--color-bg);
     display: block;
     justify-content: center;
-    font-family: 'AnonymousPro-Regular', monospace;
+    /* font-family: 'APR'; */
     margin-inline: auto;
     line-height: 1.4rem;
-}
-
-.kbody {
-    /* margin: 2rem 40rem 6rem 40rem; */
-    display: flex;
-    justify-content: center;
-    margin-inline: auto;
-    width: 40rem;
-    min-height: 100vh;
+    min-height: 85vh;
+    padding-top: 8rem;
 }
 
 ::selection {
@@ -58,36 +68,65 @@ body {
 
 h2, h4, p, span {
     color: var(--color-fg-high-contrast);
+    font-family: "APR";
+    font-weight: normal;
+}
+
+h2 {
+    margin-top: 0.5rem;
+    font-family: "HND";
+}
+
+.image-container {
+    width: 128px; /* Scale up the 16x16 image for better visibility */
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated; /* Keeps pixelation intact when scaled */
+    image-rendering: crisp-edges; /* For compatibility */
+    image-rendering: -moz-crisp-edges; /* Firefox-specific */
+    image-rendering: -webkit-optimize-contrast; /* Older WebKit browsers */
+    cursor: pointer;
+}
+
+.app {
+    width: min-content;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.app-grid {
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.grid-item {
+    display: inline-block;
 }
 
 .main-title {
-    font-weight: bold;
-    font-size: 2.5rem;
-    margin-bottom: 0;
-    margin-top: 4rem;
+    font-weight: normal;
+    font-family: "HND";
+    font-size: 5rem;
+    margin-top: 10rem;
+    margin: 0 auto;
+    width: min-content;
+    text-align: center;
+    cursor: pointer;
 }
 
 .sub-title {
     font-weight: regular;
     font-size: 1rem;
-    margin-bottom: 0;
-}
-
-.about {
-    margin-top: 20px;
-}
-
-.project-section {
-    margin-top: 4rem;
-}
-
-.project-title {
-    margin-bottom: 0.5rem;
-    min-width: auto;
-}
-
-.project-desc {
-    margin-top: 0;
 }
 
 .apple:hover {
@@ -101,57 +140,39 @@ h2, h4, p, span {
     cursor: url("/images/apple.png"), pointer;
 }
 
-.sRow > *:not(:last-child) {
+nav {
     display: flex;
-    flex-direction: row;
-    margin-right: 20px;
+    align-items: center;
+    gap: 1rem;
 }
 
-a {
+.tlink {
     padding: 0;
     text-decoration: none;
     color: var(--color-fg-low-contrast);
     border-bottom: 1px dashed var(--color-fg-low-contrast);
 }
-a:hover {
+.tlink:hover {
     color: var(--color-fg-high-contrast);
     border-bottom: 1px dashed var(--color-fg-high-contrast);
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-nav.proj {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-}
-
-.projs {
-    margin-top: 2rem;
 }
 
 .links {
     display: flex;
     margin-left: 0;
     gap: 1rem;
-    margin: 0;
+}
+
+.dotted-link {
+    display: flex;
+    align-items: center;
 }
 
 .dimmed-text {
     color: var(--color-fg-dimed);
 }
 
-.project_images {
+/* .project_images {
     width: 20%;
     border: 1px dashed var(--color-fg-dimed);
     margin-bottom: 0.5rem;
@@ -160,12 +181,7 @@ nav.proj {
 .project_images:hover {
     width: 80%;
     filter: none;
-}
-
-.dotted-link {
-    display: flex;
-    align-items: center;
-}
+} */
 
 .button {
     display: inline-block;
@@ -192,7 +208,7 @@ nav.proj {
     margin-right: 0.5rem;
 }
 
-footer {
+/* footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -202,15 +218,20 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid var(--color-border-hint);
     margin-top: 20px;
-}
+} */
 
-.left {
-    display: flex;
-    flex-direction: column;
-}
-
-.right {
-    text-align: justify;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    text-align: center;
+    padding: 10px 0;
+    /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); */
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "APR";
 }
 
 .fa-solid {
@@ -223,16 +244,11 @@ footer {
     color: var(--color-fg-high-contrast);
 }
 
-.sfooter {
-    padding-left: 10px;
+.my-footer {
+    padding-right: 10px;
 }
 
 @media screen and (max-width: 720px) {
-    .kbody {
-        margin-inline: 2rem;
-        justify-content: left;
-    }
-
     .about {
         display: block;
     }
