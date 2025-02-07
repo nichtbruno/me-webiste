@@ -7,17 +7,6 @@
     margin-bottom: 5px;
 }
 
-.back-action {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    color: var(--color-fg-dimed);
-    font-family: "APR";
-    margin-top: 5px;
-    width: min-content;
-    min-width: 90px;
-}
-
 .clock-container {
     display: flex;
     justify-content: center;
